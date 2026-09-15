@@ -1,0 +1,59 @@
+.user-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f8fafc;
+}
+
+.user-main {
+  width: calc(100% - 240px);
+  min-height: 100vh;
+
+  margin-left: 240px;
+}
+
+.user-content {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 92px 24px 20px;
+
+  background: #f8fafc;
+
+  overflow-x: hidden;
+}
+
+.user-sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .user-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .user-content {
+    padding: 82px 14px 18px;
+  }
+
+  .user-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 950;
+
+    display: block;
+
+    border: none;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-content {
+    padding: 76px 10px 14px;
+  }
+}

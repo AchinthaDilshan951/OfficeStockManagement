@@ -1,0 +1,245 @@
+.user-header {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  z-index: 900;
+
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.user-mobile-menu-button {
+  display: none;
+
+  width: 38px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #14532d;
+
+  font-size: 21px;
+
+  cursor: pointer;
+}
+
+.user-header-title {
+  min-width: 0;
+}
+
+.user-header-title h1 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.user-header-title p {
+  margin: 3px 0 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+.user-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+.user-notification-button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f0fdf4;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.user-notification-button span {
+  position: absolute;
+  top: -3px;
+  right: -2px;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #ef4444;
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.user-header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-header-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-header-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.user-header-info strong {
+  max-width: 150px;
+
+  overflow: hidden;
+
+  color: #1f2937;
+
+  font-size: 12px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-header-info span {
+  margin-top: 3px;
+
+  color: #6b7280;
+
+  font-size: 10px;
+}
+
+@media (max-width: 850px) {
+  .user-header {
+    left: 0;
+
+    height: 64px;
+
+    padding: 0 14px;
+  }
+
+  .user-mobile-menu-button {
+    display: inline-flex;
+  }
+
+  .user-header-title h1 {
+    font-size: 17px;
+  }
+
+  .user-header-title p {
+    font-size: 10px;
+  }
+
+  .user-header-actions {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-header {
+    padding: 0 10px;
+  }
+
+  .user-header-title h1 {
+    max-width: 160px;
+
+    overflow: hidden;
+
+    font-size: 14px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .user-header-title p {
+    font-size: 9px;
+  }
+
+  .user-notification-button {
+    width: 34px;
+    height: 34px;
+
+    font-size: 15px;
+  }
+
+  .user-header-avatar {
+    width: 34px;
+    height: 34px;
+
+    font-size: 11px;
+  }
+
+  .user-header-info {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .user-header-title h1 {
+    max-width: 125px;
+  }
+
+  .user-header-actions {
+    gap: 7px;
+  }
+}

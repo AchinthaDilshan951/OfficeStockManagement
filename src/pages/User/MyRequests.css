@@ -1,0 +1,561 @@
+.my-requests-page {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.my-requests-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+
+  flex-shrink: 0;
+}
+
+.my-requests-heading h2 {
+  color: #1f2937;
+  font-size: 24px;
+}
+
+.my-requests-heading p {
+  margin-top: 4px;
+
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.new-request-button {
+  height: 40px;
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 8px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.new-request-button:hover {
+  background: #15803d;
+}
+
+.my-requests-summary-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(150px, 1fr));
+
+  gap: 13px;
+  margin-bottom: 14px;
+
+  flex-shrink: 0;
+}
+
+.my-request-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.04);
+}
+
+.my-request-summary-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.my-request-summary-icon.total {
+  background: #dbeafe;
+}
+
+.my-request-summary-icon.pending {
+  background: #fef3c7;
+}
+
+.my-request-summary-icon.approved {
+  background: #dcfce7;
+}
+
+.my-request-summary-icon.rejected {
+  background: #fee2e2;
+}
+
+.my-request-summary-card div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-request-summary-card span {
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.my-request-summary-card strong {
+  margin-top: 4px;
+
+  color: #1f2937;
+  font-size: 19px;
+}
+
+.my-requests-panel {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 17px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+.my-requests-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 13px;
+
+  flex-shrink: 0;
+}
+
+.my-requests-toolbar input,
+.my-requests-toolbar select {
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  font-size: 12px;
+
+  outline: none;
+}
+
+.my-requests-toolbar input {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-requests-toolbar select {
+  width: 160px;
+}
+
+.my-requests-toolbar input:focus,
+.my-requests-toolbar select:focus {
+  border-color: #16a34a;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.my-requests-clear-button {
+  height: 40px;
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #4b5563;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.my-requests-clear-button:hover {
+  background: #f3f4f6;
+}
+
+.my-requests-table-wrapper {
+  flex: 1;
+  min-height: 0;
+
+  overflow: auto;
+
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+
+  scrollbar-width: thin;
+  scrollbar-color: #86efac #f8fafc;
+}
+
+.my-requests-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.my-requests-table-wrapper::-webkit-scrollbar-thumb {
+  background: #86efac;
+  border-radius: 10px;
+}
+
+.my-requests-table {
+  width: 100%;
+  min-width: 950px;
+
+  border-collapse: collapse;
+}
+
+.my-requests-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.my-requests-table th,
+.my-requests-table td {
+  padding: 12px 10px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  font-size: 12px;
+}
+
+.my-requests-table th {
+  background: #f8fafc;
+  color: #4b5563;
+}
+
+.my-requests-table td {
+  color: #374151;
+}
+
+.my-request-item {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+.my-request-status {
+  display: inline-block !important;
+
+  margin: 0 !important;
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px !important;
+  font-weight: 700;
+}
+
+.my-request-status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.my-request-status.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.my-request-status.rejected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.my-request-status.cancelled {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.my-request-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.my-request-actions button {
+  padding: 6px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.my-request-view-button {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.my-request-cancel-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.my-requests-empty {
+  padding: 30px !important;
+
+  text-align: center !important;
+  color: #6b7280 !important;
+}
+
+.my-requests-footer {
+  padding-top: 11px;
+
+  flex-shrink: 0;
+}
+
+.my-requests-footer span {
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.my-request-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(3px);
+}
+
+.my-request-modal {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 24px;
+
+  background: #ffffff;
+  border-radius: 15px;
+
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.my-request-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.my-request-modal-header h3 {
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.my-request-modal-header p {
+  margin-top: 4px;
+
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.my-request-modal-close {
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f3f4f6;
+  color: #4b5563;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.my-request-details-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+.my-request-detail {
+  padding: 13px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.my-request-detail > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6b7280;
+
+  font-size: 10px;
+}
+
+.my-request-detail strong {
+  color: #1f2937;
+  font-size: 12px;
+}
+
+.my-request-reason {
+  margin-top: 14px;
+  padding: 14px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.my-request-reason span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.my-request-reason p {
+  color: #374151;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.my-request-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 17px;
+}
+
+.my-request-modal-actions button {
+  height: 40px;
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.my-request-close-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.my-request-modal-cancel-button {
+  border: none;
+
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.my-request-modal-cancel-button:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .my-requests-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .my-requests-page {
+    overflow-y: auto;
+  }
+
+  .my-requests-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .my-requests-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-requests-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .my-requests-toolbar select {
+    width: 100%;
+  }
+
+  .my-requests-panel {
+    min-height: 480px;
+  }
+
+  .my-request-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-request-modal {
+    max-height: calc(100vh - 30px);
+
+    padding: 18px;
+
+    overflow-y: auto;
+  }
+}
