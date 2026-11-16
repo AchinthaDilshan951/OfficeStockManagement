@@ -222,4 +222,33 @@
 
     font-size: 12px;
   }
+  .user-sidebar-logo {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px;
+  min-height: 52px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+}
+
+.user-sidebar-logo img {
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 52px !important;
+  max-height: 52px !important;
+
+  object-fit: cover;
+
+  display: block;
+}
 }

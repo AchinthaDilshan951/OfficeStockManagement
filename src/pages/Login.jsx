@@ -10,6 +10,8 @@ import {
 
 import authService from "../services/authService";
 
+import officeStockLogo from "../assets/office-stock-logo.jpg";
+
 import "./Login.css";
 
 function Login() {
@@ -171,7 +173,10 @@ function Login() {
     <main className="login-page">
       <div className="login-container">
         <div className="login-logo">
-          📦
+          <img
+            src={officeStockLogo}
+            alt="Office Stock Management Logo"
+          />
         </div>
 
         <div className="login-brand">

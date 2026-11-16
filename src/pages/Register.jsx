@@ -7,6 +7,8 @@ import {
 
 import authService from "../services/authService";
 
+import officeStockLogo from "../assets/office-stock-logo.jpg";
+
 import "./Register.css";
 
 function Register() {
@@ -262,7 +264,10 @@ function Register() {
     <main className="register-page">
       <section className="register-card">
         <div className="register-logo">
-          📦
+          <img
+            src={officeStockLogo}
+            alt="Office Stock Management Logo"
+          />
         </div>
 
         <div className="register-brand">
@@ -319,6 +324,7 @@ function Register() {
                 handleInputChange
               }
               autoComplete="name"
+              disabled={isLoading}
             />
           </div>
 
@@ -339,6 +345,7 @@ function Register() {
                 handleInputChange
               }
               autoComplete="username"
+              disabled={isLoading}
             />
           </div>
 
@@ -359,6 +366,7 @@ function Register() {
                 handleInputChange
               }
               autoComplete="email"
+              disabled={isLoading}
             />
           </div>
 
@@ -380,6 +388,7 @@ function Register() {
               }
               maxLength="10"
               autoComplete="tel"
+              disabled={isLoading}
             />
           </div>
 
@@ -397,6 +406,7 @@ function Register() {
               onChange={
                 handleInputChange
               }
+              disabled={isLoading}
             >
               <option value="">
                 Select department
@@ -446,6 +456,7 @@ function Register() {
                   handleInputChange
                 }
                 autoComplete="new-password"
+                disabled={isLoading}
               />
 
               <button
@@ -490,6 +501,7 @@ function Register() {
                   handleInputChange
                 }
                 autoComplete="new-password"
+                disabled={isLoading}
               />
 
               <button
@@ -514,9 +526,7 @@ function Register() {
           <button
             type="submit"
             className="register-submit-button"
-            disabled={
-              isLoading
-            }
+            disabled={isLoading}
           >
             {isLoading
               ? "Creating Account..."
@@ -526,8 +536,7 @@ function Register() {
 
         <div className="register-login-section">
           <span>
-            Already have an
-            account?
+            Already have an account?
           </span>
 
           <Link to="/">

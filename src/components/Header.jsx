@@ -30,7 +30,9 @@ function Header({ onMenuClick }) {
   }
 
   const fullName =
-    currentUser?.fullName || "Admin User";
+    currentUser?.full_name ||
+    currentUser?.fullName ||
+    "Admin User";
 
   const role =
     currentUser?.role === "Admin"

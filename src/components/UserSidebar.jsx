@@ -5,6 +5,8 @@ import {
 
 import { addSystemLog } from "../utils/systemLogger";
 
+import officeStockLogo from "../assets/office-stock-logo.jpg";
+
 import "./UserSidebar.css";
 
 function UserSidebar({ isOpen, onClose }) {
@@ -89,7 +91,10 @@ function UserSidebar({ isOpen, onClose }) {
     >
       <div className="user-sidebar-brand">
         <div className="user-sidebar-logo">
-          📦
+          <img
+            src={officeStockLogo}
+            alt="Office Stock Management Logo"
+          />
         </div>
 
         <div>
